@@ -22,26 +22,26 @@ $("body").append($overlay);
 
 // capture the click event on the gallery li item
 $("#gallery li").click(function(event){
-	
-	event.preventDefault();
+  
+  event.preventDefault();
 
-	// path to video
-	var videoID = $(this).find("img").attr("id");
-	var url = "https://player.vimeo.com/video/" + videoID;
+  // path to video
+  var videoID = $(this).find("img").attr("id");
+  var url = "https://player.vimeo.com/video/" + videoID;
 
-	// location of text
-	var captionHeaderText = $(this).find("img").attr("name");
-	var captionBodyText = $(this).find("p").text();
+  // location of text
+  var captionHeaderText = $(this).find("img").attr("name");
+  var captionBodyText = $(this).find("p").text();
 
-	// fill the iframe with the video source
-	$('#myIframe').attr('src', url);
+  // fill the iframe with the video source
+  $('#myIframe').attr('src', url);
 
-	// show the overlay
-	$overlay.slideDown();
+  // show the overlay
+  $overlay.slideDown();
 
- 	// fill the overlay text
-	$captionHeader.text(captionHeaderText);
-	$captionBody.text(captionBodyText);
+  // fill the overlay text
+  $captionHeader.text(captionHeaderText);
+  $captionBody.text(captionBodyText);
 
 });
 
@@ -60,28 +60,29 @@ $overlay.click(function(){
 var $galleryItem = $("#gallery li");
 var $figcaption = $("#gallery li figcaption");
 var filterVal = "blur(8px)";
-	
+  
 $figcaption.hide();
 
 // when the mouse hovers over a gallery item
 $galleryItem.mouseover(function(){
-	// blur image
-	$(this).find("div").css("filter",filterVal);
-	
-	// show figcaption associated with image
-	$(this).find($figcaption).show();
+  // blur image
+  $(this).find("div").css("filter",filterVal);
+  
+  // show figcaption associated with image
+  $(this).find($figcaption).show();
 
 // when the mouse leaves the gallery item
 }).mouseleave(function(){
-	// hide figcaption
-	$figcaption.hide();
-	// remove blur
-	$(this).children($galleryItem).css("filter","blur(0)");	
+  // hide figcaption
+  $figcaption.hide();
+  // remove blur
+  $(this).children($galleryItem).css("filter","blur(0)"); 
 });
 
 
 
 /* ========== Carousel ========== */
+  //source: https://github.com/codepo8/simple-carousel/blob/master/carousel-simplest.html
 
 carousel = (function(){
   // Read necessary elements from the DOM once

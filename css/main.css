@@ -256,7 +256,7 @@ NAVIGATION
 	height: 350px;
 	max-width: 350px;
 	margin: 15px auto;
-	padding: 1em 1.5em;
+	padding: 1.5em 2em;
 	background-color: blue;
 	border: solid black 1px;
 }
@@ -342,62 +342,54 @@ footer p span {
 @media (max-width: 768px) {
 	/*---------- Services Section ----------*/
   	.col {
-		background-color: red;
-		display: block;
+		display: none;
   }
 
   	/*---------- Carousel ----------*/
 	.carouselbox {
-/*		font-family: helvetica,sans-serif;
-		font-size: 14px;
-		width: 100px;*/
-		position: relative;
-/*		margin: 1em;*/
-/*		border: 1px solid #ccc;*/
-/*		box-shadow: 2px 2px 10px #ccc;*/
-/*		overflow: hidden;*/
-    }
-
-/*	.content {
-		margin: 0;
-		padding: 0;
-	}*/
-
-	.content div {
-/*		font-size: 100px;*/
-/*		margin: 0;*/ 
-/*		padding: 0;*/
 		width: 100%;
-		list-style: none;
-		text-align: center;
-/*		z-index: 2;*/
-	}
+		position: relative;
+		overflow: hidden;
+    }
 
 	.active {
 		height: 400px;
+		margin-top: -50px;
 	}
 
-	.active div {
-		position: absolute;
-		width: 400px;
+/*	.active div {
 		top: 0px;
-	}
+	}*/
 
 	.active div.current {
-		top: 400px;
+		display: block;
+		position: absolute;
+		top: 45px;
+		right: 0;
+		left: 0;
+		margin: auto;
 	}
 
 	.buttons {
-		display: none;
+		/*display: none;*/
 	}
 
-	.active .buttons {
+	.active .prev,
+	.active .next {
 		display: block;
 		padding: 5px 0;
 		background: #eee;
-		text-align: center;
 		z-index: 10;
-		position: relative;
+		position: absolute;
+		top: 200px;
+	}
+
+	.active .prev {
+		left: 30px;
+	}
+
+	.active .next {
+		right: 30px;
 	}
 
 	.carouselbox button {
