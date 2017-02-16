@@ -1,0 +1,605 @@
+/***********************************
+GENERAL
+***********************************/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url(../img/placeholder.jpg) no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'Merriweather', sans-serif;
+	color: #999;
+}
+
+h1, h2 {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 0.85em;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 2.5em;
+	text-align: center;
+	margin: 20px auto;
+}
+
+h3 {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+li {
+	list-style: none;
+}
+
+
+
+/***********************************
+HEADING
+***********************************/
+
+.main-header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+	background: grey;
+	box-shadow: 0 1px 4px rgba(0,0,0,.4);
+}
+
+.name {
+	font-size: 1.75em;
+	margin: 12px 0;
+}
+
+.name a {
+	display: block;
+	text-align: center;
+	padding-top: 12px;
+	color: #fff;
+}
+
+
+
+/* ================================= 
+  DRY CLASSES
+==================================== */
+
+.section_title {
+	padding: 2.8em .5em .8em;
+	font-size: 3.5em;
+}
+
+/*article[data-tilt] {
+	data-tilt-max: 50; 
+	data-tilt-speed: 400; 
+	data-tilt-perspective: 500;
+}*/
+
+
+
+/***********************************
+NAVIGATION
+***********************************/
+
+.main-nav  {
+	text-align: center;
+	margin: 20px 0 0;
+	padding: 10px 0;
+	background: #000;
+}
+
+.main-nav li {
+	display: inline-block;
+}
+
+.main-nav a {
+	font-size: .95em;
+	padding: 10px 15px;
+	color: #fff;
+}
+
+.main-nav a:hover {
+	color: #aaa;
+}
+
+
+
+/* ================================= 
+  HOME
+==================================== */
+
+.wrapper {
+	margin-top: 810px;
+	background-color: #222;
+	position: relative;
+}
+
+.window-text {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: -600px auto;
+	position: absolute;
+	font-family: 'Merriweather', sans-serif;
+	font-size: 2em;
+	color: #eee;
+    text-shadow: 3px 3px 5px #000;
+}
+
+.window-text div {
+	margin: 0 auto 1.4em;
+	text-align: center;
+}
+
+.arrow-wrapper {
+	position: absolute;
+	width: 100%;
+	margin: -70px auto;
+}
+
+.arrow {
+	width: 0; 
+	height: 0;
+	margin: auto;
+	border-left: 25px dashed transparent;
+	border-right: 25px dashed transparent;
+	border-top: 15px solid #fff;
+	opacity: 0.2;
+}
+
+
+
+/* ================================= 
+  ABOUT SECTION
+==================================== */
+
+#about {
+	margin: 20px auto;
+}
+
+.image_container {
+	width: 98%;
+	max-width: 400px;
+	padding: 0 2em;
+	margin: 0 auto;
+}
+
+.profile-photo {
+	border-radius: 6%;
+}
+
+.about_col {
+	padding: 2.8em 2em 0;
+}
+
+
+
+/* ================================= 
+  PORTFOLIO SECTION
+==================================== */
+
+#gallery {
+	margin: 10px auto;
+	padding: 0;
+}
+
+#gallery li {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	position: relative;
+	color: #bdc3c7;
+}
+
+#gallery li:hover {
+	cursor: pointer;
+}
+
+#gallery li figcaption {
+	font-size: 1.4em;
+	line-height: 1.5;
+	width: 45%;
+	text-align: center;
+	display: none;
+	text-shadow: 1.2px 1.2px 1.2px rgba(0, 0, 0, 0.8);;
+	color: #fff;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%)
+}
+
+#gallery li p {
+	display: none;
+}
+
+#gallery li figcaption h5 {
+	font-size: 1em;
+/*	font-size: 0.75em;*/
+	border-bottom: 2px solid currentColor;
+}
+
+#gallery li figcaption h4 {
+	font-family: 'Merriweather:400i', sans-serif;
+	font-size: .9em;
+	margin: -24px 0 0;
+/*	font-size: 0.7em;*/
+/*	margin: -16px 0 0;*/
+}
+
+
+
+
+/* ================================= 
+  SERVICES SECTION
+==================================== */
+
+#services {
+	padding-bottom: 10px;
+}
+
+.col {
+	width: 100%;
+	height: 350px;
+	max-width: 350px;
+	margin: 15px auto;
+	padding: 1em 1.5em;
+	background-color: blue;
+	border: solid black 1px;
+}
+
+.col h3 {
+	text-align: center;
+}
+
+
+/***********************************
+FOOTER
+***********************************/
+
+footer {
+	display: flex;
+	background: #555;
+}
+
+footer p {
+	flex: 2;
+	margin: 50px 10px 50px 30px; 
+	color: #ccc;
+ }
+
+footer p span {
+	font-size: 2em;
+	text-decoration: bold;
+	color: blue;
+}
+
+.social-icon {
+	width: 25px;
+	height: 25px;
+	margin: 50px 30px;
+	border: 2px solid red;
+}
+
+
+
+/* ================================= 
+  OVERLAY
+==================================== */
+
+#overlay {
+	background: rgba(0,0,0,0.9);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 4.5em;
+	text-align: center;
+	display: none;
+	z-index: 2;
+}
+
+#overlay img {
+	max-width: 80%;
+	margin-top: 60px; 
+}
+
+#overlay p {
+	max-width: 85%;
+	margin: 5px auto;
+	color:white; 
+}
+
+#myIframe {
+	width: 100%;
+	height: 55%;
+	max-width: 552px;
+	max-height: 310px;
+	margin-top: 20px;
+	padding: .2em;
+	border: none;
+}
+
+
+
+/* ================================= 
+  MEDIA QUERIES
+==================================== */
+
+
+@media (max-width: 768px) {
+	/*---------- Services Section ----------*/
+  	.col {
+		background-color: red;
+		display: block;
+  }
+
+  	/*---------- Carousel ----------*/
+	.carouselbox {
+/*		font-family: helvetica,sans-serif;
+		font-size: 14px;
+		width: 100px;*/
+		position: relative;
+/*		margin: 1em;*/
+/*		border: 1px solid #ccc;*/
+/*		box-shadow: 2px 2px 10px #ccc;*/
+/*		overflow: hidden;*/
+    }
+
+/*	.content {
+		margin: 0;
+		padding: 0;
+	}*/
+
+	.content div {
+/*		font-size: 100px;*/
+/*		margin: 0;*/ 
+/*		padding: 0;*/
+		width: 100%;
+		list-style: none;
+		text-align: center;
+/*		z-index: 2;*/
+	}
+
+	.active {
+		height: 400px;
+	}
+
+	.active div {
+		position: absolute;
+		width: 400px;
+		top: 0px;
+	}
+
+	.active div.current {
+		top: 400px;
+	}
+
+	.buttons {
+		display: none;
+	}
+
+	.active .buttons {
+		display: block;
+		padding: 5px 0;
+		background: #eee;
+		text-align: center;
+		z-index: 10;
+		position: relative;
+	}
+
+	.carouselbox button {
+		border: none;
+		visibility: hidden;
+	}
+
+	.active button {
+		visibility: visible;
+	} 
+
+	.offscreen {
+		position: absolute;
+		left: -2000px;
+	}
+}
+
+
+
+@media (min-width: 769px) {
+
+	/*---------- Dry Classes----------*/
+	.section_title {
+		font-size: 2.5em;
+	}
+
+	/*---------- Header ----------*/
+	.main-header,
+	.main-nav {
+		display: flex;
+		align-items: center;
+	}
+
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+		height: 72px;
+		padding-left: 1.5em;
+	}
+
+	.name {
+		font-size: 1.85em;
+	}
+	
+	/*---------- Nav ----------*/
+	.main-nav {
+		margin: 30px 0 10px;
+		padding: 0 1em;
+		background: grey; 
+	}
+
+	.main-nav a {
+		font-size: 1em;
+	}
+
+	/*---------- Home ----------*/
+	.window-text div {
+		margin-bottom: 1.8em;
+	}	
+
+	/*---------- About Section ----------*/
+	.about {
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+	}
+
+	.about_col {
+		flex: 2;
+		padding:  0 1.5em .5em 0;
+	}
+
+	.about_col h3 {
+		margin-top: 0;
+	}
+
+	.image_container {
+		margin: 0 1em;
+		width: 50%;
+		max-width: 450px;
+	}
+
+	/*---------- Portfolio Section ----------*/
+	#gallery {
+		display: flex;
+		flex-flow: wrap;
+	}
+
+	#gallery li {
+		width: 49.5%;
+		padding: .1% 0;
+	}
+
+	#gallery li figcaption h5 {
+		font-size: 0.85em;
+	}
+
+	#gallery li figcaption h4 {
+		font-size: 0.8em;
+		margin: -16px 0 0;
+	}
+
+	/*---------- Services Section ----------*/
+	.flex-grid {
+		display: flex;
+		flex-flow: wrap;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.col {
+		width: 45%;
+		height: 300px;
+		min-width: 200px;
+		max-width: 350px;
+	}
+
+	/*---------- Carousel ----------*/
+	.buttons {
+		display: none;
+	}
+	
+	/*---------- Overlay ----------*/
+	#myIframe {
+		max-width: 768px;
+		max-height: 432px;
+	}
+}
+
+
+
+@media (min-width: 1025px) {
+		
+	/*---------- Dry ----------*/
+	.section_title {
+		width: 30%;
+		margin-bottom: 40px;
+		padding-bottom: .2em;
+		border-bottom: 2px solid currentColor;
+	}
+
+	/*---------- Header ----------*/
+	.name {
+		font-size: 2em;
+		padding-left: 2.5;
+	}
+
+	.main-nav a {
+		font-size: 1.2em;
+	}
+
+	/*---------- Home ----------*/
+	.window-text {
+		font-size: 2.2em;
+	}
+
+	/*---------- About Section ----------*/
+	.about_col {
+		padding:  0 3em .5em 0;
+	}
+
+	.image_container {
+		margin: 0 2em;
+	}
+
+	/*---------- Portfolio Section ----------*/
+	#gallery li {
+		width: 32.75%;
+		margin-bottom: 2px;
+	}
+
+	#gallery li figcaption h5 {
+		font-size: 0.75em;
+	}
+
+	#gallery li figcaption h4 {
+		font-size: 0.7em;
+	}
+
+	/*---------- Services Section ----------*/
+	#services {
+		padding-bottom: 50px;
+	}
+	
+	.flex-grid {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.col {
+		height: 250px;
+		width: 30%;
+		content: attr(data-tilt);
+	}
+
+	/*---------- Overlay ----------*/
+	#overlay img {
+		max-width: 45%;
+		margin-top: 25px; 
+	}
+}
+
+
+
+
