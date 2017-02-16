@@ -1,1 +1,1 @@
-Portfolio website for my work in sound design, audio integration, and music creation. This is also the first website I have ever created. Still a work in progress. 
+Portfolio website for my work in sound design, audio integration, and music creation. This is also the first website I have ever created. Still a work in progress, but feel free to view it here: https://kimikomu.github.io/sound_design_website/
