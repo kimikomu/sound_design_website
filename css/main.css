@@ -308,7 +308,7 @@ footer p span {
 	top: 4.5em;
 	text-align: center;
 	display: none;
-	z-index: 2;
+	z-index: 5;
 }
 
 #overlay img {
@@ -319,24 +319,36 @@ footer p span {
 #overlay p {
 	max-width: 85%;
 	margin: 5px auto;
-	color:white; 
+	color: white; 
+}
+
+#videoContainer {
+	width: 100%;
+	height: 100%;
+	max-width: 768px;
+	max-height: 432px;
+	margin: 20px auto;
+	padding: 0 .5em;
+	background: red;
 }
 
 #myIframe {
 	width: 100%;
-	height: 55%;
-	max-width: 552px;
-	max-height: 310px;
-	margin-top: 20px;
-	padding: .2em;
+	height: 100%;
 	border: none;
 }
-
 
 
 /* ================================= 
   MEDIA QUERIES
 ==================================== */
+
+/*---------- Services Section ----------*/
+@media (max-width: 560px) {
+	.buttons {
+		width: 95%
+	}
+}
 
 
 @media (max-width: 768px) {
@@ -371,25 +383,52 @@ footer p span {
 	}
 
 	.buttons {
-		/*display: none;*/
+		position: absolute;
+		right: 0;
+		left: 0;
+		margin: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 85%;
+		height: 120px;
+		top: 180px;
+		z-index: 4;
 	}
 
 	.active .prev,
 	.active .next {
-		display: block;
-		padding: 5px 0;
-		background: #eee;
-		z-index: 10;
-		position: absolute;
-		top: 200px;
+		display: inline-block;
+		padding: 2px;
+		position: relative;
+		background: transparent;
+		opacity: 0.3;
+		cursor: pointer;
 	}
 
 	.active .prev {
-		left: 30px;
+		/*left: 1px;*/
+		width: 0; 
+		height: 0; 
+		border-top: 45px dashed transparent;
+		border-bottom: 45px dashed transparent; 
+		border-right: 35px dashed #fff; 
+		user-select: none;
 	}
 
 	.active .next {
-		right: 30px;
+		/*right: 1px*/;
+		width: 0; 
+		height: 0; 
+		border-top: 45px dashed transparent;
+		border-bottom: 45px dashed transparent; 
+		border-left: 35px dashed #fff; 
+	}
+
+
+	.active .prev:focus,
+	.active .next:focus {
+		outline: none;
 	}
 
 	.carouselbox button {
@@ -405,8 +444,28 @@ footer p span {
 		position: absolute;
 		left: -2000px;
 	}
+
+/*.arrow-wrapper {
+	position: absolute;
+	width: 100%;
+	margin: -70px auto;
 }
 
+.arrow {
+	width: 0; 
+	height: 0;
+	margin: auto;
+	border-left: 25px dashed transparent;
+	border-right: 25px dashed transparent;
+	border-top: 15px solid #fff;
+	opacity: 0.2;
+}*/
+
+
+
+
+
+}
 
 
 @media (min-width: 769px) {
@@ -513,10 +572,9 @@ footer p span {
 	}
 	
 	/*---------- Overlay ----------*/
-	#myIframe {
-		max-width: 768px;
-		max-height: 432px;
-	}
+/*	#myIframe {
+
+	}*/
 }
 
 
