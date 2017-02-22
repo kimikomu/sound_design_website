@@ -47,6 +47,9 @@ $("#gallery li").click(function(event){
   $captionHeader.text(captionHeaderText);
   $captionBody.text(captionBodyText);
 
+  $('body').addClass('freeze');
+  
+
 });
 
 // hide overlay when clicked
@@ -55,7 +58,10 @@ $overlay.click(function(){
 
   // remove video playback source
   $('#myIframe').attr('src', " ");
+
+  $('body').removeClass('freeze');
 });
+
 
 
 
@@ -87,6 +93,8 @@ $galleryItem.mouseover(function(){
 
 /* ========== Load based on media query ========== 
    Carousel source: https://github.com/codepo8/simple-carousel/blob/master/carousel-simplest.html */
+
+//  on window resize - eventlistener for window size?????
 
 // the viewport is at least 768 pixels wide
 if (window.matchMedia("(max-width: 768px)").matches) {
