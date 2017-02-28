@@ -90,7 +90,6 @@ $galleryItem.mouseover(function(){
 
 /* ========== Load Content Based on Screen Size ========== */
    
-
 var loadContentAccordingToSize = function() {
   // the viewport is less than 768 pixels wide
   if (window.matchMedia("(max-width: 768px)").matches) {
