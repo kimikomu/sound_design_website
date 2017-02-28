@@ -356,19 +356,6 @@ footer p span {
   MEDIA QUERIES
 ==================================== */
 
-@media (min-width: 460px) {
-/*---------- Overlay ----------*/
-	#videoContainer {
-		height: 50%;
-	}
-
-@media (min-width: 640px) {
-/*---------- Overlay ----------*/
-	#videoContainer {
-		height: 100%;
-	}
-
-
 @media (max-width: 768px) {
 	/*---------- Services Section ----------*/
   	.col {
@@ -487,6 +474,18 @@ footer p span {
 }
 
 
+
+@media (min-width: 460px) {
+/*---------- Overlay ----------*/
+	#videoContainer {
+		height: 50%;
+	}
+
+@media (min-width: 620px) {
+/*---------- Overlay ----------*/
+	#videoContainer {
+		height: 100%;
+	}
 
 @media (min-width: 769px) {
 
