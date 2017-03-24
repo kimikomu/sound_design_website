@@ -90,6 +90,7 @@ $galleryItem.mouseover(function(){
 
 /* ========== Load Content Based on Screen Size ========== */
    
+
 var loadContentAccordingToSize = function() {
   // the viewport is less than 768 pixels wide
   if (window.matchMedia("(max-width: 768px)").matches) {
@@ -147,9 +148,16 @@ var loadContentAccordingToSize = function() {
       navigate(0);
     })(); 
 
-    // $(".flex-grid").find('div').removeAttr('data-tilt').removeAttr('style');
+    $(".flex-grid").find('div').removeAttr('data-tilt');
 
-  };
+    $(".flex-grid").find('div').attr('data-tilt-max', 0);
+    $(".flex-grid").find('div').attr('style', 'none');
+
+  } 
+  else  if (window.matchMedia("(min-width: 769px)").matches){
+    var tilt = document.getElementById('dataTest');
+    tilt.dataset.tiltMax = 50;
+  }
 
   // else if (window.matchMedia("(min-width: 769px)").matches){
   //     if (/* data-tilt is not already added */) {
