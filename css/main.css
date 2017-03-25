@@ -149,6 +149,11 @@ NAVIGATION
 	text-align: center;
 }
 
+.window-text div h3 {
+	margin: 50px 0;
+	font-size: 1em;
+}
+
 .arrow-wrapper {
 	position: absolute;
 	width: 100%;
@@ -162,7 +167,7 @@ NAVIGATION
 	border-left: 25px dashed transparent;
 	border-right: 25px dashed transparent;
 	border-top: 15px solid #fff;
-	opacity: 0.2;
+	opacity: 0.4;
 }
 
 
@@ -395,50 +400,34 @@ footer p span {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		width: 85%;
-		height: 120px;
-		top: 200px;
+		width: 55%;
+		height: 60px;
+		top: 346px;
 		z-index: 4;
 	}
 
 	.active .prev,
 	.active .next {
+		width: 60px;
 		display: inline-block;
-		padding: 2px;
 		position: relative;
+		opacity: 0.7;
 		background: transparent;
-		opacity: 0.3;
 		cursor: pointer;
 	}
-
-	.active .prev {
-		/*left: 1px;*/
-		width: 0; 
-		height: 0; 
-		border-top: 15px dashed transparent;
-		border-bottom: 15px dashed transparent; 
-		border-right: 15px dashed #fff; 
-		user-select: none;
-	}
-
-	.active .next {
-		/*right: 1px*/;
-		width: 0; 
-		height: 0; 
-		border-top: 15px dashed transparent;
-		border-bottom: 15px dashed transparent; 
-		border-left: 15px dashed #fff; 
-	}
-
 
 	.active .prev:focus,
 	.active .next:focus {
 		outline: none;
 	}
 
-	.active .prev:hover,
-	.active .next:hover {
-		opacity: 0.5;
+	.icon {
+	  display: inline-block;
+	  width: 2.2em;
+	  height: 2.2em;
+	  stroke-width: 0;
+	  stroke: currentColor;
+	  fill: #999;
 	}
 
 	.carouselbox button {
@@ -455,24 +444,7 @@ footer p span {
 		left: -2000px;
 	}
 
-/*.arrow-wrapper {
-	position: absolute;
-	width: 100%;
-	margin: -70px auto;
 }
-
-.arrow {
-	width: 0; 
-	height: 0;
-	margin: auto;
-	border-left: 25px dashed transparent;
-	border-right: 25px dashed transparent;
-	border-top: 15px solid #fff;
-	opacity: 0.2;
-}*/
-
-}
-
 
 
 @media (min-width: 460px) {
