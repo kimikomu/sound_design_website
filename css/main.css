@@ -248,8 +248,6 @@ NAVIGATION
 	font-family: 'Merriweather:400i', sans-serif;
 	font-size: .9em;
 	margin: -24px 0 0;
-/*	font-size: 0.7em;*/
-/*	margin: -16px 0 0;*/
 }
 
 
@@ -259,7 +257,7 @@ NAVIGATION
 ==================================== */
 
 #services {
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .col {
@@ -283,12 +281,14 @@ FOOTER
 
 footer {
 	display: flex;
+	flex-direction: column;
+	height: 190px;
+	width: 100%;
 	background: #555;
 }
 
 footer p {
-	flex: 2;
-	margin: 50px 10px 50px 30px; 
+	margin: 50px 6px 20px 20px; 
 	color: #ccc;
  }
 
@@ -299,10 +299,21 @@ footer p span {
 }
 
 .social-icon {
-	width: 25px;
-	height: 25px;
-	margin: 50px 30px;
-	border: 2px solid red;
+	display: flex;
+	justify-content: flex-start;
+	width: 10em;
+	height: 64px;
+	margin: 10px 0 5px 10px;
+}
+
+.icon {
+	width: 42px;
+	height: 42px;
+	padding: 3px;
+	margin: 0 .4em 8px .4em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: #999;
 }
 
 
@@ -379,10 +390,6 @@ footer p span {
 		margin-top: -50px;
 	}
 
-/*	.active div {
-		top: 0px;
-	}*/
-
 	.active div.current {
 		display: block;
 		position: absolute;
@@ -400,9 +407,9 @@ footer p span {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		width: 55%;
+		width: 65%;
 		height: 60px;
-		top: 346px;
+		top: -4px;
 		z-index: 4;
 	}
 
@@ -421,7 +428,8 @@ footer p span {
 		outline: none;
 	}
 
-	.icon {
+	.icon-arrow-left2,
+	.icon-arrow-right2 {
 	  display: inline-block;
 	  width: 2.2em;
 	  height: 2.2em;
@@ -562,7 +570,40 @@ footer p span {
 		display: none;
 	}
 
+	
+	/*---------- Footer ----------*/
+	footer {
+		flex-direction: row;
+		justify-content: space-around;
+		height: 150px;
+	}
 
+	footer p {
+		flex-grow: 2;
+		margin-left: 2em;
+	}
+
+	footer p span {
+		font-size: 2.8em;
+	}
+
+	.social-icon {
+		display: flex;
+		justify-content: flex-end;
+		margin: 58px 2em 5px 2em;
+	}
+
+	.icon {
+		width: 42px;
+		height: 42px;
+		padding: 3px;
+		margin: 0 .5em 8px .5em;
+		stroke-width: 0;
+		stroke: currentColor;
+		fill: #999;
+	}
+
+}
 
 @media (min-width: 1025px) {
 		
@@ -626,6 +667,15 @@ footer p span {
 		height: 250px;
 		width: 30%;
 		content: attr(data-tilt);
+	}
+
+	/*---------- Footer ----------*/
+	footer p {
+		margin-left: 4.5em;
+	}
+
+	.social-icon {
+		margin-right: 4.5em;
 	}
 
 	/*---------- Overlay ----------*/
