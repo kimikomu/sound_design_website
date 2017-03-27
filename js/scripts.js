@@ -165,28 +165,21 @@ var loadContentAccordingToSize = function() {
       navigate(0);
     })(); 
 
-    // $(".flex-grid").find('div').removeAttr('data-tilt');
 
-    // $(".flex-grid").find('div').attr('data-tilt-max', 0);
-    // $(".flex-grid").find('div').attr('style', 'none');
 
+
+    /* ========== Data-tilt ========== */
+
+    // remove data-tilt 
+    $(".flex-grid").find('div').removeAttr('data-tilt');
+    console.log("data-tilt attribute has been removed");
   } 
 
-
-  // else  if (window.matchMedia("(min-width: 769px)").matches){
-  //   var tilt = document.getElementById('dataTest');
-  //   tilt.dataset.tiltMax = 50;
-  // }
-
-  // else if (window.matchMedia("(min-width: 769px)").matches){
-  //     if (/* data-tilt is not already added */) {
-  //       // add data-tilt to divs in flex-grid in Services Section
-  //       $(".flex-grid").find('div').attr('data-tilt', '');
-  //       console.log("matchMedia is working");
-  //     };
-  // };
-
-
+  // add data-tilt if the viewport is larger than 768 pixels wide
+  else if (window.matchMedia("(min-width: 769px)").matches) {
+      $(".flex-grid").find('div').attr('data-tilt', '');
+      console.log("data-tilt attribute has been added");
+  }
 };
 
 // load appropriate content on page load
