@@ -1,4 +1,13 @@
 
+/* ========== Show/Hide Nav Menu ========== */
+
+$("#nav-icon").click(function() {
+  $(this).toggleClass('open');
+  $(".menu").slideToggle("slow", function() {
+  });
+});
+
+
 /* ========== Lightbox ========== */
 
 var $overlay = $('<div id="overlay"></div>');
@@ -92,10 +101,18 @@ $galleryItem.mouseover(function(){
    
 
 var loadContentAccordingToSize = function() {
-  // the viewport is less than 768 pixels wide
+
+  // hide menu if the viewport is less than 768 pixels wide
+  if (window.matchMedia("(max-width: 545px)").matches) {
+    $(".menu").hide();
+  } else {
+    $(".menu").show();
+  }
+
+
+  // load carousel if the viewport is less than 768 pixels wide
   if (window.matchMedia("(max-width: 768px)").matches) {
 
-    // load carousel in Services Section
     // Carousel source: https://github.com/codepo8/simple-carousel/blob/master/carousel-simplest.html
     carousel = (function(){
       // Read necessary elements from the DOM once
@@ -148,16 +165,18 @@ var loadContentAccordingToSize = function() {
       navigate(0);
     })(); 
 
-    $(".flex-grid").find('div').removeAttr('data-tilt');
+    // $(".flex-grid").find('div').removeAttr('data-tilt');
 
-    $(".flex-grid").find('div').attr('data-tilt-max', 0);
-    $(".flex-grid").find('div').attr('style', 'none');
+    // $(".flex-grid").find('div').attr('data-tilt-max', 0);
+    // $(".flex-grid").find('div').attr('style', 'none');
 
   } 
-  else  if (window.matchMedia("(min-width: 769px)").matches){
-    var tilt = document.getElementById('dataTest');
-    tilt.dataset.tiltMax = 50;
-  }
+
+
+  // else  if (window.matchMedia("(min-width: 769px)").matches){
+  //   var tilt = document.getElementById('dataTest');
+  //   tilt.dataset.tiltMax = 50;
+  // }
 
   // else if (window.matchMedia("(min-width: 769px)").matches){
   //     if (/* data-tilt is not already added */) {
