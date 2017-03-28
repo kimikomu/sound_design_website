@@ -57,7 +57,7 @@ HEADING
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 1;
+	z-index: 4;
 	background: grey;
 	box-shadow: 0 1px 4px rgba(0,0,0,.4);
 }
@@ -115,6 +115,7 @@ NAVIGATION
 	margin: 0;
 	padding: 10px 0;
 	background: #000;
+	z-index: 4;
 }
 
 .main-nav li {
@@ -134,7 +135,7 @@ NAVIGATION
 
 /***********************************
 Hamburger Menu 
-Animation source: https://codepen.io/designcouch/pen/Atyop
+Source: https://codepen.io/designcouch/pen/Atyop
 ***********************************/
 #nav-icon {
   width: 40px;
@@ -499,7 +500,7 @@ footer h3 span {
 		width: 65%;
 		height: 60px;
 		top: -4px;
-		z-index: 4;
+		z-index: 2;
 	}
 
 	.active .prev,
@@ -755,6 +756,10 @@ footer h3 span {
 		padding-left: 2.5;
 	}
 
+	.main-nav {
+		margin-top: 28px;
+	}
+
 	.main-nav a {
 		font-size: 1.4em;
 	}
@@ -818,6 +823,22 @@ footer h3 span {
 		margin-top: 25px; 
 	}
 }
+
+@media (min-width: 1600px) {
+	.wrapper {
+		margin-top: 900px;
+	}
+
+}
+
+@media (min-width: 1680px) {
+	.wrapper {
+		margin-top: 1080px;
+	}
+
+}
+
+
 
 
 

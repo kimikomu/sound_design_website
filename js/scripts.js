@@ -102,7 +102,10 @@ $galleryItem.mouseover(function(){
 
 var loadContentAccordingToSize = function() {
 
-  // hide menu if the viewport is less than 768 pixels wide
+  // .col class will get tilt effect
+  const tilt = $('.col').tilt();
+
+  // hide menu if the viewport is less than 545 pixels wide
   if (window.matchMedia("(max-width: 545px)").matches) {
     $(".menu").hide();
   } else {
@@ -110,8 +113,11 @@ var loadContentAccordingToSize = function() {
   }
 
 
-  // load carousel if the viewport is less than 768 pixels wide
+  // viewport is less than 768 pixels wide
   if (window.matchMedia("(max-width: 768px)").matches) {
+
+    // Disable tilt effect
+    tilt.tilt.destroy.call(tilt);
 
     // Carousel source: https://github.com/codepo8/simple-carousel/blob/master/carousel-simplest.html
     carousel = (function(){
@@ -164,21 +170,9 @@ var loadContentAccordingToSize = function() {
       // show the first element (when direction is 0 counter doesn't change)
       navigate(0);
     })(); 
-
-
-
-
-    /* ========== Data-tilt ========== */
-
-    // remove data-tilt 
-    $(".flex-grid").find('div').removeAttr('data-tilt');
-    console.log("data-tilt attribute has been removed");
-  } 
-
-  // add data-tilt if the viewport is larger than 768 pixels wide
-  else if (window.matchMedia("(min-width: 769px)").matches) {
-      $(".flex-grid").find('div').attr('data-tilt', '');
-      console.log("data-tilt attribute has been added");
+  } else {
+    // enable tilt effect
+    tilt.tilt.reset.call(tilt);
   }
 };
 
