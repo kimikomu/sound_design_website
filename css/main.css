@@ -1,13 +1,11 @@
-/***********************************
+/* ================================= 
 GENERAL
-***********************************/
+==================================== */
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background: url(../img/placeholder.jpg) no-repeat center center fixed;
-	background-size: cover;
 	color: #999;
 }
 
@@ -49,9 +47,27 @@ li {
 
 
 
-/***********************************
+/* ================================= 
+  DRY CLASSES
+==================================== */
+
+.section_title {
+	padding: 2.8em .5em .8em;
+	font-size: 3.5em;
+}
+
+.freeze {
+	max-height: 100%;
+	min-height: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+
+/* ================================= 
 HEADING
-***********************************/
+==================================== */
 
 .main-header {
 	position: fixed;
@@ -81,34 +97,9 @@ HEADING
 
 
 
-
 /* ================================= 
-  DRY CLASSES
-==================================== */
-
-.section_title {
-	padding: 2.8em .5em .8em;
-	font-size: 3.5em;
-}
-
-.freeze {
-	max-height: 100%;
-	min-height: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-
-/*article[data-tilt] {
-	data-tilt-max: 50; 
-	data-tilt-speed: 400; 
-	data-tilt-perspective: 500;
-}*/
-
-
-
-/***********************************
 NAVIGATION
-***********************************/
+==================================== */
 
 .main-nav  {
 	text-align: center;
@@ -133,10 +124,11 @@ NAVIGATION
 	color: #aaa;
 }
 
-/***********************************
-Hamburger Menu 
-Source: https://codepen.io/designcouch/pen/Atyop
-***********************************/
+
+
+
+/*---------- HAMBURGER MENU ----------*/
+/* Source: https://codepen.io/designcouch/pen/Atyop */
 #nav-icon {
   width: 40px;
   height: 45px;
@@ -159,7 +151,7 @@ Source: https://codepen.io/designcouch/pen/Atyop
   position: absolute;
   height: 4px;
   width: 100%;
-  background: blue;
+  background: #000;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -213,28 +205,40 @@ Source: https://codepen.io/designcouch/pen/Atyop
 
 
 /* ================================= 
-  HOME
+  TOP SECTION
 ==================================== */
 
+#background {
+	min-height: 100%;
+	min-width: 1px;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+
 .wrapper {
-	margin-top: 810px;
+	margin-top: 800px;
 	background-color: #222;
 	position: relative;
 }
 
 .window-text {
-	display: flex;
-	flex-direction: column;
+/*	display: flex;
+	flex-direction: column;*/
 	width: 100%;
-	margin: -600px auto;
+	margin: 0 auto;
 	position: absolute;
+/*	top: -600px;*/
 	font-family: 'Merriweather', sans-serif;
 	font-size: 2em;
 	color: #eee;
     text-shadow: 3px 3px 5px #000;
 }
 
-.window-text div {
+/*.window-text div {
 	margin: 0 auto 1.4em;
 	text-align: center;
 }
@@ -242,6 +246,16 @@ Source: https://codepen.io/designcouch/pen/Atyop
 .window-text div h3 {
 	margin: 50px 0;
 	font-size: 1em;
+}*/
+
+.window-center {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   left: 50%;
+   top: 50%; 
+   margin-left: -150px;
+   margin-top: -500px;
 }
 
 .arrow-wrapper {
@@ -256,8 +270,8 @@ Source: https://codepen.io/designcouch/pen/Atyop
 	margin: auto;
 	border-left: 25px dashed transparent;
 	border-right: 25px dashed transparent;
-	border-top: 15px solid #fff;
-	opacity: 0.4;
+	border-top: 15px solid blue;
+	opacity: 0.6;
 }
 
 
@@ -365,9 +379,9 @@ Source: https://codepen.io/designcouch/pen/Atyop
 }
 
 
-/***********************************
+/* ================================= 
 FOOTER
-***********************************/
+==================================== */
 
 footer {
 	display: flex;
@@ -378,7 +392,7 @@ footer {
 }
 
 footer h3 {
-	margin: 50px 6px 20px 20px; 
+	margin: 50px 6px 0 20px; 
 	color: #ccc;
  }
 
@@ -462,11 +476,36 @@ footer h3 span {
   MEDIA QUERIES
 ==================================== */
 
+@media (max-width: 768px) and (min-height: 900px) {
+	
+	.wrapper {
+		margin-top: 1000px;
+	}
+
+}
+
+@media (max-width: 380px){
+	
+	.wrapper {
+		margin-top: 450px;
+	}
+
+	.window-center {
+		margin-top: -300px;
+	}
+}
+
 @media (max-width: 768px) {
+	/*---------- Top Section ----------*/
+	#background {
+	    right: 50%;
+	    margin-right: -512px;   /* 50% */
+  	}
+
 	/*---------- Services Section ----------*/
   	.col {
 		display: none;
-  }
+  	}
 
   	/*---------- Carousel ----------*/
 	.carouselbox {
@@ -544,19 +583,10 @@ footer h3 span {
 
 }
 
-
 @media (min-width: 460px) {
 /*---------- Overlay ----------*/
 	#videoContainer {
 		height: 50%;
-	}
-}
-
-
-@media (min-width: 620px) {
-/*---------- Overlay ----------*/
-	#videoContainer {
-		height: 100%;
 	}
 }
 
@@ -597,14 +627,27 @@ footer h3 span {
 }
 
 
-
-
+@media (min-width: 620px) {
+/*---------- Overlay ----------*/
+	#videoContainer {
+		height: 100%;
+	}
+}
 
 @media (min-width: 769px) {
 
 	/*---------- Dry Classes----------*/
 	.section_title {
 		font-size: 2.5em;
+	}
+
+
+	.wrapper {
+		margin-top: 1024px;
+	}
+
+	.window-center {
+		margin-top: -800px;
 	}
 
 	/*---------- Header ----------*/
@@ -637,10 +680,23 @@ footer h3 span {
 		font-size: 1.2em;
 	}
 
-	/*---------- Home ----------*/
-	.window-text div {
-		margin-bottom: 1.8em;
+	/*---------- Top Section ----------*/
+	.window-text {
+		width: 80%;
 	}	
+
+	.window-center {
+		width: 500px;
+		height: 500px;
+	}
+
+	.window-center h3 {
+		text-align: center;
+	}
+
+	.arrow-wrapper {
+		top: -620px;
+	}
 
 	/*---------- About Section ----------*/
 	.about {
@@ -764,9 +820,14 @@ footer h3 span {
 		font-size: 1.4em;
 	}
 
-	/*---------- Home ----------*/
+	/*---------- Top Section ----------*/
 	.window-text {
 		font-size: 2.2em;
+	}
+
+	.window-center {
+		width: 600px;
+		height: 600px;
 	}
 
 	/*---------- About Section ----------*/

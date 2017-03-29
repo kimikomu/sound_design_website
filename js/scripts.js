@@ -112,14 +112,13 @@ var loadContentAccordingToSize = function() {
     $(".menu").show();
   }
 
-
   // viewport is less than 768 pixels wide
   if (window.matchMedia("(max-width: 768px)").matches) {
 
-    // Disable tilt effect
-    tilt.tilt.destroy.call(tilt);
+    // add image for mobile devices
+    $('#background').attr('src', 'img/background_xsm_prt.jpg');
 
-    // Carousel source: https://github.com/codepo8/simple-carousel/blob/master/carousel-simplest.html
+    // Enable carousel - source: https://github.com/codepo8/simple-carousel/blob/master/carousel-simplest.html
     carousel = (function(){
       // Read necessary elements from the DOM once
       var box = document.querySelector('.carouselbox');
@@ -171,8 +170,17 @@ var loadContentAccordingToSize = function() {
       navigate(0);
     })(); 
   } else {
-    // enable tilt effect
-    tilt.tilt.reset.call(tilt);
+      // add image for desktop screen size
+      $('#background').attr('src', 'img/background_sm.jpg');
+  }
+
+  // viewport is less than 1024 pixels wide
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+      // Disable tilt effect
+      tilt.tilt.destroy.call(tilt);
+  } else {
+      // enable tilt effect
+      tilt.tilt.reset.call(tilt);
   }
 };
 
