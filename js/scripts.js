@@ -111,7 +111,6 @@ $galleryItem.mouseover(function(){
 
 
 /* ========== Load Content Based on Screen Size ========== */
-   
 
 var loadContentAccordingToSize = function() {
 
