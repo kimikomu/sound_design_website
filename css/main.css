@@ -41,6 +41,10 @@ img {
 	height: auto;
 }
 
+ul {
+	padding: 0;
+}
+
 li {
 	list-style: none;
 }
@@ -226,27 +230,14 @@ NAVIGATION
 }
 
 .window-text {
-/*	display: flex;
-	flex-direction: column;*/
 	width: 100%;
 	margin: 0 auto;
 	position: absolute;
-/*	top: -600px;*/
 	font-family: 'Merriweather', sans-serif;
 	font-size: 2em;
 	color: #eee;
     text-shadow: 3px 3px 5px #000;
 }
-
-/*.window-text div {
-	margin: 0 auto 1.4em;
-	text-align: center;
-}
-
-.window-text div h3 {
-	margin: 50px 0;
-	font-size: 1em;
-}*/
 
 .window-center {
    width: 300px;
@@ -299,6 +290,14 @@ NAVIGATION
 	padding: 2.8em 2em 0;
 }
 
+.about_col h3{
+	text-align: center;
+}
+	
+.sub_head {
+	margin-top: -2px;
+	text-align: center;
+}
 
 
 /* ================================= 
@@ -344,7 +343,6 @@ NAVIGATION
 
 #gallery li figcaption h5 {
 	font-size: 1em;
-/*	font-size: 0.75em;*/
 	border-bottom: 2px solid currentColor;
 }
 
@@ -354,7 +352,9 @@ NAVIGATION
 	margin: -24px 0 0;
 }
 
-
+.client, .year, .services {
+	display: none;
+}
 
 /* ================================= 
   SERVICES SECTION
@@ -375,7 +375,12 @@ NAVIGATION
 }
 
 .col h3 {
+	font-size: 1.4em;
 	text-align: center;
+}
+
+.col p {
+	font-size: 1.2em;
 }
 
 
@@ -433,8 +438,8 @@ footer h3 span {
 	padding-bottom: 85px;
 	position: fixed;
 	top: 4.5em;
-	text-align: center;
-	display: none;
+/*	text-align: center;
+*/	display: none;
 	overflow-x: scroll;
 	z-index: 5;
 }
@@ -444,10 +449,15 @@ footer h3 span {
 	margin-top: 60px; 
 }
 
+#overlay h4 {
+	text-align: center;
+}
+
 #overlay p {
 	max-width: 85%;
 	margin: 5px auto;
-	color: white; 
+	color: white;
+	text-align: left;
 }
 
 #videoContainer {
@@ -753,6 +763,16 @@ footer h3 span {
 		height: 300px;
 		min-width: 200px;
 		max-width: 350px;
+		padding: 16px 24px;
+	}
+
+	.col h3 {
+		font-size: 1.2em;
+	}
+
+	.col p {
+		margin: 14px 0 8px;
+		font-size: 1em;
 	}
 
 	/*---------- Carousel ----------*/
@@ -837,6 +857,14 @@ footer h3 span {
 
 	.image_container {
 		margin: 0 2em;
+	}
+
+	.about_col h3{
+		text-align: left;
+	}
+	
+	.sub_head {
+		text-align: left;
 	}
 
 	/*---------- Portfolio Section ----------*/

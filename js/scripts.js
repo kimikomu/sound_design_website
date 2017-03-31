@@ -13,6 +13,7 @@ $("#nav-icon").click(function() {
 var $overlay = $('<div id="overlay"></div>');
 var $galleryImage = $("<img>");
 var $captionHeader = $("<h4></h4>");
+var $captionInfo = $("<p></p>");
 var $captionBody = $("<p></p>");
 var $videoContainer = $('<div id="videoContainer"></div>');
 var $videoPlayer = $('<iframe id="myIframe"></iframe>');
@@ -28,6 +29,7 @@ $overlay.append($videoContainer);
 $overlay.append($captionHeader);
 
 // add caption body to overlay
+$overlay.append($captionInfo);
 $overlay.append($captionBody);
 
 // add overlay
@@ -44,7 +46,15 @@ $("#gallery li").click(function(event){
 
   // location of text
   var captionHeaderText = $(this).find("img").attr("name");
-  var captionBodyText = $(this).find("p").text();
+  var listItem1 = $(this).find(".client").text();
+  var listItem2 = $(this).find(".year").text();
+  var listItem3 = $(this).find(".services").text();
+  var captionBodyText = $(this).find(".about-vid").text();
+
+  var htmlString = "<ul><li>" + listItem1;
+  htmlString += "</li><li>" + listItem2;
+  htmlString += "</li><li>" + listItem3;
+  htmlString += "</ul>";
 
   // fill the iframe with the video source
   $('#myIframe').attr('src', url);
@@ -54,8 +64,10 @@ $("#gallery li").click(function(event){
 
   // fill the overlay text
   $captionHeader.text(captionHeaderText);
+  $captionInfo.html(htmlString);
   $captionBody.text(captionBodyText);
 
+ // keep the body from scrolling behind the overlay
   $('body').addClass('freeze');
 });
 
@@ -66,6 +78,7 @@ $overlay.click(function(){
   // remove video playback source
   $('#myIframe').attr('src', " ");
 
+  // body scrolls when overlay is hidden
   $('body').removeClass('freeze');
 });
 
