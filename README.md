@@ -1,4 +1,4 @@
-#Code Louisville Front End Development Final Project 2017
+# Code Louisville Front End Development Final Project 2017
 You can view the project here: https://kimikomu.github.io/sound_design_website/
 
 For my final project, I created a website for my work as a sound designer and audio integrator. The site is divided into 4 sections that are web responsive. The Navigation bar is responsive as well.
