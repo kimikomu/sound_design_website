@@ -756,24 +756,24 @@ footer h3 span {
 	/*---------- Services Section ----------*/
 	.flex-grid {
 		display: flex;
-		flex-flow: wrap;
 		margin: 0 auto;
 	}
 
-	.col {
-		height: 300px;
-		min-width: 450px;
-		max-width: 750px;
-		padding: 16px 24px;
+	#col1, #col2 {
+		min-width: 50%;
+
 	}
 
-	.col h3 {
-		font-size: 1.2em;
+	.col {
+		height: 24em;
+		margin-bottom: 3em;
+		min-width: 65%;
+		max-width: 88%;
 	}
 
 	.col p {
-		margin: 14px 0 8px;
-		font-size: 1em;
+		margin: 8px 0;
+		font-size: 1.1em;
 	}
 
 	/*---------- Carousel ----------*/
@@ -821,7 +821,7 @@ footer h3 span {
 	/*---------- Dry ----------*/
 	.section_title {
 		width: 30%;
-		margin-bottom: 40px;
+		margin-bottom: 2em;
 		padding-bottom: .2em;
 		border-bottom: 2px solid currentColor;
 	}
@@ -893,8 +893,8 @@ footer h3 span {
 	}
 
 	.col {
-		height: 250px;
-		width: 30%;
+		height: 20em;
+		width: 35%;
 		content: attr(data-tilt);
 	}
 
