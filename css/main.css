@@ -757,15 +757,13 @@ footer h3 span {
 	.flex-grid {
 		display: flex;
 		flex-flow: wrap;
-		width: 90%;
 		margin: 0 auto;
 	}
 
 	.col {
-		width: 45%;
 		height: 300px;
-		min-width: 400px;
-		max-width: 500px;
+		min-width: 450px;
+		max-width: 800px;
 		padding: 16px 24px;
 	}
 
