@@ -261,8 +261,8 @@ NAVIGATION
 	margin: auto;
 	border-left: 25px dashed transparent;
 	border-right: 25px dashed transparent;
-	border-top: 15px solid blue;
-	opacity: 0.6;
+	border-top: 15px solid #19212f;
+	opacity: 0.8;
 }
 
 
@@ -370,17 +370,20 @@ NAVIGATION
 	max-width: 350px;
 	margin: 15px auto;
 	padding: 1.5em 2em;
-	background-color: blue;
-	border: solid black 1px;
+
+
+	background-color: #19212f;
+	border: solid black 5px;
+	border-radius: 20px;
 }
 
-.col h3 {
-	font-size: 1.4em;
+.col h2 {
 	text-align: center;
 }
 
 .col p {
 	font-size: 1.2em;
+	text-align: center;
 }
 
 
@@ -403,8 +406,8 @@ footer h3 {
 
 footer h3 span {
 	font-size: 2em;
-	text-decoration: bold;
-	color: blue;
+	text-decoration: underline solid #142d47 5px;
+	color: #142d47;
 }
 
 .social-icon {
@@ -829,7 +832,7 @@ footer h3 span {
 	.name {
 		font-size: 2em;
 		margin-left: 15px;
-		padding-left: 2.5;
+		padding-left: 2.5em;
 	}
 
 	.main-nav {
