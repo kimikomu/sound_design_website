@@ -764,8 +764,8 @@ footer h3 span {
 	.col {
 		width: 45%;
 		height: 300px;
-		min-width: 200px;
-		max-width: 350px;
+		min-width: 400px;
+		max-width: 500px;
 		padding: 16px 24px;
 	}
 
